@@ -54,9 +54,6 @@ return {
   {
     "pappasam/papercolor-theme-slim",
     lazy = false,
-    config = function()
-	vim.cmd('colorscheme PaperColorSlim')
-	end
   },
   {
     "AstroNvim/astrocore",
