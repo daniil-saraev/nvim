@@ -35,7 +35,7 @@ vim.diagnostic.config({ update_in_insert = true })
 
 require('onedark').setup {
     style = 'warmer',
-    transparent = false,
+    transparent = true,
     colors = {
         bg0 = '#1c1c1c',
         purple = '#af87d7',
