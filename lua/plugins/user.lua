@@ -1,6 +1,11 @@
 return {
   { "nvim-neo-tree/neo-tree.nvim", enabled = false },
   {
+    "aznhe21/actions-preview.nvim",
+    lazy = false,
+    config = function() vim.keymap.set({ "v", "n" }, "<leader>a", require("actions-preview").code_actions) end,
+  },
+  {
     "fedepujol/move.nvim",
     lazy = false,
     config = function()
@@ -18,6 +23,21 @@ return {
         },
         char = {
           enable = true, -- Enables char movement
+        },
+      }
+    end,
+  },
+  {
+    "unblevable/quick-scope",
+    lazy = false,
+  },
+  {
+    "m4xshen/autoclose.nvim",
+    lazy = false,
+    config = function()
+      require("autoclose").setup {
+        keys = {
+          ["<"] = { escape = false, close = true, pair = "<>", disabled_filetypes = {} },
         },
       }
     end,
